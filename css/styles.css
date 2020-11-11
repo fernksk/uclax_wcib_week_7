@@ -1,0 +1,19 @@
+body {
+  font-family: sans-serif;
+  margin: 20px; }
+  body .board {
+    background: yellow;
+    width: 300px;
+    height: 300px;
+    margin-bottom: 20px; }
+  body .square {
+    width: 100px;
+    height: 100px;
+    float: left; }
+    body .square.red {
+      background: red; }
+    body .square.green {
+      background: green; }
+  body .animal {
+    width: 100px;
+    height: auto; }
