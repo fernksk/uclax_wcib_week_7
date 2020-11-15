@@ -1,82 +1,109 @@
 jQuery(function() {
 
 	let my_switch = false;
+	$('#button1').click(function () {
 
-	$('#my_button').click(function () {
+		if ( my_switch == false ) {
+			my_switch = true;
+
+			$('p').hide();
+			$('#leftpanel').show();
+			$('#button2').show();
+			$(this).html('BACK TO HALLWAY');
+			$('#my_image').attr('src', 'images/b1.jpg');
+
+		} else {
+			my_switch = false;
+
+$('p').hide();
+			$('#leftpanel').hide();
+			$('#button2').show();
+			$(this).html('GO TO BEDROOM');
+			$('#my_image').attr('src', 'images/thumb.jpg');
+		}
+	});
+});
+
+//<---panel-->
+jQuery(document).ready(function($){
+	$('#b1').on({
+		'click': function(){
+			$('#my_image').attr('src','images/b2.jpg');
+		}
+	});
+
+	$('#b2').on({
+		'click': function(){
+			$('#my_image').attr('src','images/b3.jpg');
+		}
+	});
+
+	$('#b3').on({
+		'click': function(){
+			$('#my_image').attr('src','images/b4.jpg');
+		}
+	});
+});
+
+//<----->
+jQuery(document).ready(function($){
+$("#b3").mouseleave(function(){
+alert("LOOK SO MUCH BETTER!! LETS GO TO LIVING ROOM");
+	});
+		});
 
 
-	//if ( my_switch == false ) {
-	//	my_switch = true;
-	//	$('.square.alt').addClass('red');
-	//} else {
-	//	my_switch = false;
-	//	$('.square.alt').removeClass('red');
-	//}
+//<----->
+jQuery(function() {
 
-//<--to this-->
+	let my_switch = false;
+	$('#button2').click(function () {
 
-//if ( $('.square.alt').hasClass('red')){
-	//$('.square.alt').removeClass('red');
-//} else {
-	//$('.square.alt').addClass('red');
-//}
+		if ( my_switch == false ) {
+			my_switch = true;
 
-//<--fade in&out-->
+			$('#leftpanel').hide();
+			$('#button1').hide();
+			$('#button2').hide();
+			$('#rightpanel').show();
+			$(this).html('BACK TO HALLWAY');
+			$('#my_image').attr('src', 'images/l1.jpg');
 
-//$('#my_image').slideUp();
-//$('#my_image').fadeOut();
+		} else {
+			my_switch = false;
 
-//if ( my_switch == false ) {
-	//my_switch = true;
-	//$('#my_image').fadeOut();
-//} else {
-	//my_switch = false;
-	//$('#my_image').fadeIn();
-//}
+			$('#leftpanel').hide();
+			$('#button1').hide();
+			$('#button2').hide();
+			$('#rightpanel').hide();
+			$(this).html('GO TO LIVING ROOM');
+			$('#my_image').attr('src', 'images/thumb.jpg');
+		}
+	});
+});
 
-//<--change images-->
+//<---panel-->
+jQuery(document).ready(function($){
+	$('#b4').on({
+		'click': function(){
+			$('#my_image').attr('src','images/l4.jpg');
+		}
+	});
 
-//if ( my_switch == false ) {
-//	my_switch = true;
-//} else {
-//	my_switch = false;
-//	$('#my_image').attr('src', 'images/kitten.png');
-//}
+	$('#b5').on({
+		'click': function(){
+			$('#my_image').attr('src','images/l9.jpg');
+		}
+	});
 
-//<--change images&button text content-->
+	$('#b6').on({
+		'click': function(){
+			$('#my_image').attr('src','images/l9.jpg');
+		}
+	});
+});
 
-//change it in html first
-//from <button id="my_button" class="btn btn-primary">Button</button> to
-//<button id="my_button" class="btn btn-primary">Click for puppy</button>
-//then use jQ
-
-//if ( my_switch == false ) {
-//	my_switch = true;
-
-//	$(this).html('Click for Kitten');
-//	$('#my_image').attr('src', 'images/puppy.png');
-
-//} else {
-//	my_switch = false;
-
-//	$(this).html('Click for Puppy');
-//	$('#my_image').attr('src', 'images/kitten.png');
-//}
-
-//<--change images,button text content and button color-->
-
-if ( my_switch == false ) {
-	my_switch = true;
-
-	$(this).html('Click for Kitten').removeClass('btn-primary').addClass('btn-success');
-	$('#my_image').attr('src', 'images/puppy.png');
-
-} else {
-	my_switch = false;
-
-	$(this).html('Click for Puppy').removeClass('btn-success').addClass('btn-primary');
-	$('#my_image').attr('src', 'images/kitten.png');
+//<---restart-->
+function refreshPage(){
+	window.location.reload();
 }
-
-});
-});

@@ -1,47 +1,75 @@
 <!doctype html>
 <html class="" lang="en">
 
-  <head>
-    <meta charset="utf-8">
+<head>
+  <meta charset="utf-8">
 
-    <title>Interactive e-card</title>
+  <title>Interactive e-card</title>
 
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="shortcut icon" type="image/x-icon" href="http://kskpage.com/favicon1.ico">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/scripts.js"></script>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="shortcut icon" type="image/x-icon" href="http://kskpage.com/favicon1.ico">
 
-  </head>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/scripts.js"></script>
 
-  <body>
+</head>
 
-    <h1>Week 7, Part 1</h1>
+<body>
+  <h1><strong>── WELCOME HOME ──</strong></h1>
+  <br>
 
-    <div class="board">
-			<div class="square alt"></div>
-			<div class="square"></div>
-			<div class="square alt"></div>
-			<div class="square"></div>
-			<div class="square alt"></div>
-			<div class="square"></div>
-			<div class="square alt"></div>
-			<div class="square"></div>
-			<div class="square alt"></div>
-		</div>
+  <img src="images/thumb.jpg" id="my_image" class="media" alt="hallway">
 
-		<p>
-      <img src="images/kitten.png" id="my_image" class="animal">
-    </p>
+  <div id="leftpanel" class="text-left hide">
+    <br>
+    <button id="b1" class="btn btn-primary">FIRST, TIDY UP!</button>
+    <button id="b2" class="btn btn-primary">THEN, CHANGE WALLPAPER</button>
+    <button id="b3" class="btn btn-primary">AND PUT ON SOME DECORATIONS!!</button>
+  </div>
 
-		<button id="my_button" class="btn btn-primary">Button</button>
+  <div id="rightpanel" class="text-right hide">
+    <br>
+    <button id="b4" class="btn btn-primary">BRING IN CHRISTMAS SPIRITS!</button>
+    <button id="b5" class="btn btn-primary">YES, FOOOD!!</button>
+    <button id="b6" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">LET'S ENJOY A MOVIE</button>
+  </div>
+  <br>
+  <p><strong>HOLIDAY IS HERE! LET'S PUT THINGS TO PLACE.</strong></p>
 
+  <div class="wrapper">
+    <button id="button1" class="btn btn-primary">GO TO BEDROOM</button>
+    <button id="button2" class="btn btn-primary hide">GO TO LIVING ROOM</button>
+    <button class="btn btn-secondary reset" onClick="refreshPage()">RESTART</button>
+  </div>
 
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenter" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title" id="exampleModalLongTitle">✿ HAPPY HOLIDAYS WHEREVER YOU ARE ✿</h2>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div>
+            <img src="images/hpotter.gif" width="460" alt="TV">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE TV</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
-	</body>
+</body>
 
 </html>
